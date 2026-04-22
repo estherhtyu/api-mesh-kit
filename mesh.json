@@ -5,7 +5,7 @@
         "name": "AdobeCommerceAPI",
         "handler": {
           "graphql": {
-            "endpoint": "https://na1-sandbox.api.commerce.adobe.com/Xun223LbRqWUYemTUEBb8y/graphql"
+            "endpoint": "{{env.COMMERCE_ENDPOINT}}"
           }
         }
       }
