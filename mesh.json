@@ -18,7 +18,7 @@
           "http://localhost:3000"
         ],
         "methods": ["GET", "POST", "OPTIONS"],
-        "allowedHeaders": "Content-Type, Store, X-Magento-Cache-Id, Authorization",
+        "allowedHeaders": ["Content-Type", "Store", "X-Magento-Cache-Id", "Authorization"],
         "credentials": true,
         "maxAge": 60480
       }
