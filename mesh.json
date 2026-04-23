@@ -19,7 +19,7 @@
         ],
         "methods": ["GET", "POST", "OPTIONS"],
         "allowedHeaders": ["Content-Type", "Store", "X-Magento-Cache-Id", "Authorization"],
-        "credentials": true,
+        "credentials": false,
         "maxAge": 60480
       }
     }
