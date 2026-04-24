@@ -5,7 +5,16 @@
         "name": "AdobeCommerceAPI",
         "handler": {
           "graphql": {
-            "endpoint": "{{env.COMMERCE_ENDPOINT}}"
+            "endpoint": "{{env.COMMERCE_ENDPOINT}}",
+            "operationHeaders": {
+              "Store": "{context.headers['store']}",
+              "Magento-Environment-Id": "{context.headers['magento-environment-id']}",
+              "Magento-Store-Code": "{context.headers['magento-store-code']}",
+              "Magento-Store-View-Code": "{context.headers['magento-store-view-code']}",
+              "Magento-Website-Code": "{context.headers['magento-website-code']}",
+              "X-Api-Key": "{context.headers['x-api-key']}",
+              "Content-Type": "application/json"
+            }
           }
         }
       }
@@ -18,7 +27,17 @@
           "http://localhost:3000"
         ],
         "methods": ["GET", "POST", "OPTIONS"],
-        "allowedHeaders": ["Content-Type", "Store", "X-Magento-Cache-Id", "Authorization"],
+        "allowedHeaders": [
+          "Content-Type",
+          "Store",
+          "Magento-Environment-Id",
+          "Magento-Store-Code",
+          "Magento-Store-View-Code",
+          "Magento-Website-Code",
+          "X-Api-Key",
+          "X-Magento-Cache-Id",
+          "Authorization"
+        ],
         "credentials": false,
         "maxAge": 60480
       }
